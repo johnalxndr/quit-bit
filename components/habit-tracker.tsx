@@ -74,18 +74,15 @@ export default function HabitTracker() {
   const getMessage = () => {
     if (count === 0) {
       return {
-        title: "You haven't logged any usage today!",
-        subtitle: "Keep it up!"
+        title: "You haven't logged any usage today!"
       };
     } else if (count === 1) {
       return {
-        title: "You've logged 1 usage today",
-        subtitle: "Try to reduce it tomorrow"
+        title: "You've logged 1 usage today"
       };
     } else {
       return {
-        title: `You've logged ${count} usages today`,
-        subtitle: "Try to reduce it tomorrow"
+        title: `You've logged ${count} usages today`
       };
     }
   };
@@ -108,7 +105,6 @@ export default function HabitTracker() {
     <View style={styles.container}>
       <View style={styles.messageContainer}>
         <Text style={[styles.messageTitle, { color: theme.text }]}>{message.title}</Text>
-        <Text style={[styles.messageSubtitle, { color: theme.textSecondary }]}>{message.subtitle}</Text>
       </View>
       
       <View style={styles.counterContainer}>
